@@ -7,7 +7,7 @@ void	free_strs(char **big, char	*small)
 	i = 0;
 	if (big)
 	{
-		while (big[0])
+		while (big[i])
 		{
 			free(big[i]);
 			i++;

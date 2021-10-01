@@ -34,9 +34,9 @@ void	run_cmd1(t_data *d, char **av, char **env)
 	dup2(d->pipefd[1], STDOUT_FILENO);
 	dup2(d->file1, STDIN_FILENO);
 	close_fd(d);
-	execve(d->path1, d->cmd1, env);
 	d->curr_path = NULL;
 	d->tmp = NULL;
+	execve(d->path1, d->cmd1, env);
 }
 
 void	run_cmd2(t_data *d, char **av, char **env)
@@ -49,8 +49,6 @@ void	run_cmd2(t_data *d, char **av, char **env)
 	dup2(d->file2, STDOUT_FILENO);
 	close_fd(d);
 	execve(d->path2, d->cmd2, env);
-	free(d->curr_path);
-	free(d->tmp);
 }
 
 void	ft_quit(char *str)
@@ -85,5 +83,7 @@ int	main(int ac, char **av, char **env)
 	close_fd(&data);
 	waitpid(data.pid1, NULL, 0);
 	waitpid(data.pid2, NULL, 0);
+	free(data.curr_path);
+	free(data.tmp);
 	return (0);
 }

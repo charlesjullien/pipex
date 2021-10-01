@@ -70,10 +70,10 @@ int	main(int ac, char **av, char **env)
 		ft_quit("model : ./pipex file1 cmd1 cmd2 file2\n");
 	data.file1 = open(av[1], O_RDONLY);
 	if (data.file1 == -1)
-		ft_quit("Error : read error on file1\n");
+		ft_quit(av[1]);
 	data.file2 = open(av[4], O_WRONLY | O_CREAT, 0644);
 	if (data.file2 == -1)
-		ft_quit("Error : read error on file2\n");
+		ft_quit(av[4]);
 	if (pipe(data.pipefd) == -1)
 		ft_quit("Error : pipe file descriptors initialization failed\n");
 	data.pid1 = fork();

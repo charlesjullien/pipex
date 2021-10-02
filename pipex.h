@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pipex.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cjullien <cjullien@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/02 17:22:34 by cjullien          #+#    #+#             */
+/*   Updated: 2021/10/02 17:25:12 by cjullien         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PIPEX_H
 # define PIPEX_H
 # include <stdlib.h>
@@ -6,6 +18,7 @@
 # include <errno.h>
 # include <string.h>
 # include <stdio.h>
+# include <sys/wait.h>
 
 typedef struct s_data	t_data;
 struct			s_data
@@ -19,8 +32,6 @@ struct			s_data
 	char	**cmd2;
 	char	*path1;
 	char	*path2;
-	char	*tmp;
-	char	*curr_path;
 };
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);

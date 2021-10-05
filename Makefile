@@ -2,7 +2,8 @@
 
 CC		=	gcc
 NAME	=	pipex
-FLAGS	=	-Wall -Wextra -Werror -g
+FLAGS	=	-Wall -Wextra -Werror -g -fsanitize=address
+
 INC		=	pipex.h
 OBJ		=	objs
 OBJS	=	$(addprefix $(OBJ)/, $(SRCS:.c=.o))

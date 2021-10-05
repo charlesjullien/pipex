@@ -6,7 +6,7 @@
 /*   By: cjullien <cjullien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:22:57 by cjullien          #+#    #+#             */
-/*   Updated: 2021/10/02 17:22:59 by cjullien         ###   ########.fr       */
+/*   Updated: 2021/10/05 18:41:45 by cjullien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
-int	ft_strlen(const char *str)
+int	ft_strlen(char const *str)
 {
 	int	i;
 
@@ -98,7 +98,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	j;
 	unsigned int	len;
 
-	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
+	len = ft_strlen(s1) + ft_strlen(s2);
 	i = 0;
 	str = (char *)malloc(sizeof(char) * len + 1);
 	if (!str)

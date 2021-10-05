@@ -6,7 +6,7 @@
 /*   By: cjullien <cjullien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:22:34 by cjullien          #+#    #+#             */
-/*   Updated: 2021/10/02 17:25:12 by cjullien         ###   ########.fr       */
+/*   Updated: 2021/10/05 19:21:36 by cjullien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@
 # include <stdio.h>
 # include <sys/wait.h>
 
+
+//PAS OUBLIER DENLEVER LE FSANITIZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE makefile
+//
+//
 typedef struct s_data	t_data;
 struct			s_data
 {
@@ -41,6 +45,8 @@ void	close_fd(t_data *d);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
-void	ft_quit(char *str);
+void	ft_quit(char *str, int i);
+int		check_no_space(char *str);
+int		ft_strlen(char const *str);
 
 #endif

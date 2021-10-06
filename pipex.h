@@ -6,7 +6,7 @@
 /*   By: cjullien <cjullien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:22:34 by cjullien          #+#    #+#             */
-/*   Updated: 2021/10/05 19:21:36 by cjullien         ###   ########.fr       */
+/*   Updated: 2021/10/06 13:04:13 by cjullien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@
 # include <stdio.h>
 # include <sys/wait.h>
 
-
-//PAS OUBLIER DENLEVER LE FSANITIZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE makefile
-//
-//
 typedef struct s_data	t_data;
 struct			s_data
 {

@@ -6,7 +6,7 @@
 /*   By: cjullien <cjullien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:21:43 by cjullien          #+#    #+#             */
-/*   Updated: 2021/10/05 20:31:34 by cjullien         ###   ########.fr       */
+/*   Updated: 2021/10/06 13:04:43 by cjullien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*find_path(char *str, char **env, int i)
 
 void	run_cmd1(t_data *d, char **av, char **env)
 {
-	int j;
+	int	j;
 
 	if (check_no_space(av[2]))
 		d->cmd1 = ft_split(av[2], ' ');
@@ -103,7 +103,6 @@ int	main(int ac, char **av, char **env)
 		ft_quit("Error : pipe file descriptors initialization failed\n", 0);
 	if (data.file1 != -1)
 		data.pid1 = fork();
-	printf("pid = %d\n", data.pid1);
 	if (data.pid1 == 0 && data.file1 != -1)
 		run_cmd1(&data, av, env);
 	data.pid2 = fork();
